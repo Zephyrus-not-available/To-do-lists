@@ -1,8 +1,22 @@
 package com.kyaw.task.service;
 
-import org.springframework.stereotype.Service;
+import com.kyaw.task.domain.CreateTaskRequest;
+import com.kyaw.task.domain.UpdateTaskRequest;
+import com.kyaw.task.domain.entity.Task;
 
-@Service
+import java.util.List;
+import java.util.UUID;
+
+
 public interface TaskService {
+    Task createTask(CreateTaskRequest request);
+
+    List<Task> listTasks();
+
+    Task updateTask(UUID taskId,UpdateTaskRequest request);
+
+    void deleteTask(UUID taskId);
+
+
 
 }
